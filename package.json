@@ -1,17 +1,89 @@
 {
-  "name": "react-native-picker",
-  "version": "4.3.7",
+  "_args": [
+    [
+      {
+        "raw": "react-native-picker@^4.3.0",
+        "scope": null,
+        "escapedName": "react-native-picker",
+        "name": "react-native-picker",
+        "rawSpec": "^4.3.0",
+        "spec": ">=4.3.0 <5.0.0",
+        "type": "range"
+      },
+      "C:\\Users\\yeming\\Desktop\\RN\\mcloud-h5"
+    ]
+  ],
+  "_cnpm_publish_time": 1510556680264,
+  "_from": "react-native-picker@^4.3.0",
+  "_hasShrinkwrap": false,
+  "_id": "react-native-picker@4.3.0",
+  "_location": "/react-native-picker",
+  "_nodeVersion": "6.1.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/react-native-picker-4.3.0.tgz_1510556680187_0.6848943140357733"
+  },
+  "_npmUser": {
+    "name": "zooble",
+    "email": "wenliang.web@gmail.com"
+  },
+  "_npmVersion": "3.8.6",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-picker@^4.3.0",
+    "scope": null,
+    "escapedName": "react-native-picker",
+    "name": "react-native-picker",
+    "rawSpec": "^4.3.0",
+    "spec": ">=4.3.0 <5.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/react-native-picker/download/react-native-picker-4.3.0.tgz",
+  "_shasum": "df4011723f30dd9f622739aae1afe9aabd293573",
+  "_shrinkwrap": null,
+  "_spec": "react-native-picker@^4.3.0",
+  "_where": "C:\\Users\\yeming\\Desktop\\RN\\mcloud-h5",
+  "author": {
+    "name": "zooble"
+  },
+  "bugs": {
+    "url": "https://github.com/beefe/react-native-picker/issues"
+  },
+  "dependencies": {},
   "description": "A Native Picker with high performance.",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "df4011723f30dd9f622739aae1afe9aabd293573",
+    "size": 27484,
+    "noattachment": false,
+    "tarball": "http://registry.npm.taobao.org/react-native-picker/download/react-native-picker-4.3.0.tgz"
+  },
+  "gitHead": "06d63e02023b809ba8e91617921422bc604a5168",
+  "homepage": "https://github.com/beefe/react-native-picker",
+  "license": "MIT",
   "main": "index.js",
-  "types": "index.d.ts",
+  "maintainers": [
+    {
+      "name": "zooble",
+      "email": "wenliang.web@gmail.com"
+    }
+  ],
+  "name": "react-native-picker",
+  "optionalDependencies": {},
+  "publish_time": 1510556680264,
+  "readme": "# react-native-picker\n\n[![npm version](https://img.shields.io/npm/v/react-native-picker.svg?style=flat-square)](https://www.npmjs.com/package/react-native-picker) <a href=\"https://david-dm.org/beefe/react-native-picker\"><img src=\"https://david-dm.org/beefe/react-native-picker.svg?style=flat-square\" alt=\"dependency status\"></a>   \n\n![ui3](./doc/ui3.jpg)\n![ui4](./doc/ui4.jpg)\n\n### Documentation\n\n#### Params\n\n|Key | Description | Type | Default|\n| --- | ----------- | ---- | ------ |\n|pickerConfirmBtnText  |            |string  |confirm            |\n|pickerCancelBtnText   |            |string  |cancel             |\n|pickerTitleText       |            |string  |pls select         |\n|pickerConfirmBtnColor |            |array   |[1, 186, 245, 1]   |\n|pickerCancelBtnColor  |            |array   |[1, 186, 245, 1]   |\n|pickerTitleColor      |            |array   |[20, 20, 20, 1]    |\n|pickerToolBarBg       |            |array   |[232, 232, 232, 1] |\n|pickerBg              |            |array   |[196, 199, 206, 1] |\n|pickerToolBarFontSize |            |number  |16                 |\n|wheelFlex             |            |array   |[1, 1, 1]          |\n|pickerFontSize        |            |number  |16                 |\n|pickerFontColor       |            |array   |[31, 31, 31, 1]    |\n|pickerData            |            |array   |                   |\n|selectedValue         |            |array   |                   |\n|onPickerConfirm       |            |function|                   |\n|onPickerCancel        |            |function|                   |\n|onPickerSelect        |            |function|                   |\n\n#### Methods\n\n|Name | Description | Type | Default|\n| --- | ----------- | ---- | ------ |\n|init         |init and pass parameters to picker      |     |   |\n|toggle       |show or hide picker                     |     |   |\n|show         |show picker                             |     |   |\n|hide         |hide picker                             |     |   |\n|select       |select a row                            |array|   |\n|isPickerShow |get status of picker, return a boolean  |     |   |\n\n\n### Usage\n\n#### Step 1 - install\n\n```\n\tnpm install react-native-picker --save\n```\n\n#### Step 2 - link\n\n```\n\treact-native link\n```\n\n#### Step 3 - import and use in project\n\n```javascript\n    import Picker from 'react-native-picker';\n    let data = [];\n    for(var i=0;i<100;i++){\n        data.push(i);\n    }\n\n    Picker.init({\n        pickerData: data,\n        selectedValue: [59],\n        onPickerConfirm: data => {\n            console.log(data);\n        },\n        onPickerCancel: data => {\n            console.log(data);\n        },\n        onPickerSelect: data => {\n            console.log(data);\n        }\n    });\n    Picker.show();\n\t\n```\n\n### Integration With Existing Apps (`iOS`)\nThe `Podfile` will like below:\n``` ruby\nplatform :ios, '8.0'\ntarget 'YourTarget' do\n    pod 'React', :path => '../YOUR_REACT_NATIVE_PROJECT/node_modules/react-native', :subspecs => [\n    'Core',\n    ...\n    ]\n    pod 'Picker', :path => '../YOUR_REACT_NATIVE_PROJECT/node_modules/react-native-picker'\nend\n```\nAfter you have updated the `Podfile` of the existing app, you can install `react-native-picker` like below:\n``` bash\n$ pod install\n```\n\n### Notice\n\n#### support two modes:\n\n<b>1. parallel:</b> such as time picker, wheels have no connection with each other\n\n<b>2. cascade:</b> such as date picker, address picker .etc, when front wheel changed, the behind wheels will all be reset\n\n#### parallel:\n\n- single wheel:\n\n```javascript\n\tpickerData = [1,2,3,4];\n\tselectedValue = 3;\n```\n\n- two or more wheel:\n\n```javascript\n\tpickerData = [\n\t\t[1,2,3,4],\n\t\t[5,6,7,8],\n\t\t...\n\t];\n\tselectedValue = [1, 5];\n```\n\n#### cascade:\n\n- two wheel\n\n```javascript\n    pickerData = [\n        {\n            a: [1, 2, 3, 4]\n        },\n        {\n            b: [5, 6, 7, 8]\n        },\n        ...\n    ];\n    selectedValue = ['a', 2];\n```\n\n- three wheel\n\n```javascript\n    pickerData = [\n        {\n            a: [\n                {\n                    a1: [1, 2, 3, 4]\n                },\n                {\n                    a2: [5, 6, 7, 8]\n                },\n                {\n                    a3: [9, 10, 11, 12]\n                }\n            ]\n        },\n        {\n            b: [\n                {\n                    b1: [11, 22, 33, 44]\n                },\n                {\n                    b2: [55, 66, 77, 88]\n                },\n                {\n                    b3: [99, 1010, 1111, 1212]\n                }\n            ]\n        },\n        {\n            c: [\n                {\n                    c1: ['a', 'b', 'c']\n                },\n                {\n                    c2: ['aa', 'bb', 'cc']\n                },\n                {\n                    c3: ['aaa', 'bbb', 'ccc']\n                }\n            ]\n        },\n        ...\n    ]\n```\n\n### For pure javascript version -> [v3.0.5](https://github.com/beefe/react-native-picker/tree/pure-javascript-version)\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/beefe/react-native-picker.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:beefe/react-native-picker.git"
-  },
-  "author": "zooble",
-  "license": "MIT",
-  "homepage": "https://github.com/beefe/react-native-picker"
+  "types": "index.d.ts",
+  "version": "4.3.0"
 }
